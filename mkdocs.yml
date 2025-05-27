@@ -5,6 +5,7 @@ site_url: https://fcte-qualidade-de-software-1.github.io
 site_name: Qualidades de Software - Frances Allen
 nav:
     - Início: "index.md"
+    - Ponto de controle 1: "gqm.md"
 theme:
   name: material
   features:
