@@ -5,8 +5,8 @@ site_url: https://fcte-qualidade-de-software-1.github.io
 site_name: Qualidades de Software - Frances Allen
 nav:
   - Início: "index.md"
+  - Introdução: "pontoCrontole1/introducao.md"
   - Ponto de controle 1:
-      - Introdução: "pontoCrontole1/introducao.md"
       - Aspectos de Qualidade: pontoCrontole1/qualidade.md
       - Produto Avaliado: pontoCrontole1/produto.md
       - ONU: "pontoCrontole1/onu.md"
