@@ -25,3 +25,9 @@
 ![Slide 12](../../image/slideManutencao/12.png)
 
 ![Slide 13](../../image/slideManutencao/13.png)
+
+## Histórico de Versão
+
+|    Data    | Versão |          Descrição          |                    Autor(es)                    | Data de revisão |                  Revisor(es)                  |
+| :--------: | :----: | :-------------------------: | :---------------------------------------------: | :-------------: | :-------------------------------------------: |
+| 19/05/2025 |  1.0   | Versão inicial de documento | [Maria Luisa](https://github.com/marialuisa214) |   19/05/2025    | [Cauã Corrêa](https://github.com/CauaMatheus) |
