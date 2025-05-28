@@ -13,6 +13,7 @@ nav:
       - Atividades Realizadas:
           - Slide Manutenção de Software: "pontoCrontole1/atividadeSala/manutencaoSoftware.md"
           - Objetivo de Medição: "pontoCrontole1/atividadeSala/gqm.md"
+      - Tabela de Contribuição: "pontoCrontole1/contribuicao.md"
 theme:
   name: material
   features:
