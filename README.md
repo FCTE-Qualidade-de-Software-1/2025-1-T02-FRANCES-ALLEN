@@ -1,6 +1,7 @@
 # Qualidades
 
 Esta página é dedicada à documentação de todos os artefatos produzidos pelo grupo Frances Allen na disciplina de Qualidades da Faculdade do Gama da Universida de Brasília (FGA-UnB).
+
 ## Grupo
 <table>
   <tr>
