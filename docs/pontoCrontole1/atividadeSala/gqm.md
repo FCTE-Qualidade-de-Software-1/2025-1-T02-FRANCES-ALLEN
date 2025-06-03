@@ -40,14 +40,6 @@
 
 ![Diagrama GQM](../../image/diagrama_1.svg)
 
-## Objetivo de Medição 2
-
-### Tabela de Contribuições
-
-| Matrícula | Nome Completo | Contribuição (%) |
-| --------- | ------------- | ---------------- |
-|           |               |                  |
-
 ## Histórico de Versão
 
 |    Data    | Versão |          Descrição          |                  Autor(es)                   | Data de revisão |                  Revisor(es)                  |
