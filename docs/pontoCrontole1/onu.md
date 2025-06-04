@@ -25,3 +25,10 @@
 > **Meta 12.2:** Até 2030, alcançar a gestão sustentável e o uso eficiente dos recursos naturais.
 
 > **12.2.2:** Consumo de material doméstico, consumo de material doméstico per capita e consumo de material doméstico por PIB.
+
+## Histórico de Versão
+
+| Data | Versão | Descrição | Autor(es) | Data de revisão | Revisor(es) |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| 19/05/2025 | `1.0`  | Versão inicial de documento | [José Filipi](https://github.com/JoseFilipi) | 03/06/2025 | [Gabriel Castelo](https://github.com/GabrielCastelo-31) |
+| 03/06/2025 | `1.1`  | Adição do histórico de versão | [Gabriel Castelo](https://github.com/GabrielCastelo-31) | 03/06/2025 | [José Filipi](https://github.com/JoseFilipi) |
