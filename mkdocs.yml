@@ -5,6 +5,15 @@ site_url: https://fcte-qualidade-de-software-1.github.io
 site_name: Qualidades de Software - Frances Allen
 nav:
   - Início: "index.md"
+  - Avaliação da Qualidade do Agromart:
+    - Fase 1: parte1/fase1.md
+    - Fase 2: parte1/fase2.md
+    - Fase 3: parte1/fase3.md
+    - Fase 4: parte1/fase4.md
+  - Gestão do Projeto com métricas PSM/CID:
+    - Desempenho dos Processos: parte2/desempenhoDosProcessos.md
+    - Calendário e Progresso: parte2/calendarioEProgresso.md
+    - Recursos e Custos: parte2/recursosECustos.md
   - Introdução: "pontoCrontole1/introducao.md"
   - Ponto de controle 1:
       - Aspectos de Qualidade: pontoCrontole1/qualidade.md
@@ -19,16 +28,27 @@ theme:
   features:
     - navigation.tabs
   palette:
-    # Palette toggle for light mode
     - scheme: default
       primary: orange
       toggle:
         icon: material/eye
         name: Mudar para o modo escuro
-
-    # Palette toggle for dark mode
     - scheme: slate
       primary: teal
       toggle:
         icon: material/eye-outline
         name: Mudar para o modo claro
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+plugins:
+  - search
+  - panzoom:
+      key: "none"
+      full_screen: True
