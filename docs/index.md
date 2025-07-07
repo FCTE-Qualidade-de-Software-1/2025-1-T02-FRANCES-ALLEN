@@ -103,7 +103,7 @@ Dentro de "Recursos e Custos" será analisada todas as ferramentas que podem ser
 
 
 ## Histórico de Versão
-| Data | Versão | Descrição | Autor(es) | Data de revisão | Revisor(es) |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| 19/05/2025 | `1.0`  | Versão inicial de documento | [José Filipi](https://github.com/JoseFilipi) | 19/05/2025 | [Cauã Corrêa](https://github.com/CauaMatheus) | 
-| 06/07/2025 | `1.0`  | Adicionando detalhes sobre cada tópico | [Cauã Corrêa](https://github.com/CauaMatheus) | -- | -- | 
+|    Data    | Versão |               Descrição                |                   Autor(es)                   | Data de revisão |                  Revisor(es)                  |
+| :--------: | :----: | :------------------------------------: | :-------------------------------------------: | :-------------: | :-------------------------------------------: |
+| 19/05/2025 | `1.0`  |      Versão inicial de documento       | [José Filipi](https://github.com/JoseFilipi)  |   19/05/2025    | [Cauã Corrêa](https://github.com/CauaMatheus) |
+| 06/07/2025 | `1.0`  | Adicionando detalhes sobre cada tópico | [Cauã Corrêa](https://github.com/CauaMatheus) |       --        |                      --                       |
