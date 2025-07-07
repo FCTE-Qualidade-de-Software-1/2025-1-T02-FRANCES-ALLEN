@@ -1,10 +1,11 @@
-# Fase 1 - Projetar a avaliação
-## 1. Plano de avaliação 
+# Fase 3 - Projetar a avaliação
 
-## Objetivo da Avaliação
+
+## Plano de avaliação 
+
 Avaliar a manutenibilidade do sistema AGROMART com base em métricas de modularidade, legibilidade e testabilidade, visando identificar pontos de melhoria e garantir que o código seja sustentável, compreensível e testável.
 
-## 2. Método de Avaliação
+## 1. Método de Avaliação
 Será utilizada uma abordagem quantitativa baseada em métricas de código, com ferramentas automatizadas e revisão manual quando necessário.
 
 | **Dimensão**        | **Questão**                                  | **Métrica**                                 | **Ferramenta**                 | **Como utilizar**                                                                 |
@@ -20,14 +21,14 @@ Será utilizada uma abordagem quantitativa baseada em métricas de código, com 
 | **Confiabilidade**  | Q6: O sistema lida bem com erros?            | M9. Cobertura de tratamento de exceções     | Verificação manual, SonarQube  | Analisar se há `try/catch`, tratamento de falhas e logging consistente.          |
 
 
-### 3. Recursos Necessários
+### 2. Recursos Necessários
 | Recurso                     | Descrição                                                             |
 | --------------------------- | --------------------------------------------------------------------- |
 | ESLint                      | Com plugins para regras de estilo e complexidade                      |
 | SonarQube                   | Para análise estática de código, incluindo complexidade               |
 | Jest                        | Framework de testes do JavaScript com relatórios de cobertura e tempo |
 
-### 4. Cronograma de Ações
+### 3. Cronograma de Ações
 | Etapa                                       | Responsável        | Prazo Estimado |
 | ------------------------------------------- | ------------------ | -------------- |
 | Configuração do ESLint                      | Caua + Maria    | Dia 1          |
@@ -38,9 +39,8 @@ Será utilizada uma abordagem quantitativa baseada em métricas de código, com 
 | Análise dos resultados e conclusão          | Caua  | Dia 5          |
 
 
-### 5.Documentos e Registros de Apoio à Avaliação
-Além da coleta automática e análise estática, os seguintes documentos e ferramentas também serão utilizados como fontes formais de evidência:
-### 5. Documentos e Registros de Apoio à Avaliação
+### 4.Documentos e Registros de Apoio à Avaliação
+
 
 Além da coleta automática e análise estática, os seguintes documentos e ferramentas também serão utilizados como fontes formais de evidência:
 
