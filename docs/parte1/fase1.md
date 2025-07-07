@@ -67,4 +67,13 @@ Já na IEEE 1062 o produto se enquadraria no tipo **COTS (Commercial Off-The-She
 
 ## Modelo de qualidade
 
-Para essas análises, será utilizado o modelo **Q-RAPIDS** para desenvolvimento e evolução do software, além de identificar com mais velocidade os pontos de melhorias por meio de seus gráficos em constante coleta de dados. Junto com ele, será utilizado o SQUARE como guia para algumas medidas e análises a serem melhoradas do projeto.
+A equipe irá utilizar o modelo de qualidade **Square**, junto com as metologias **Q-Rapids** e **GQM**.
+
+### SQUARE:
+![Square Model](../../image/fase1/Square.png)
+
+### GQM:
+![GQM](../../image/fase1/GQM.png)
+
+### Q-Rapids:
+![Q-Rapids](../../image/fase1/QRapids.png)
