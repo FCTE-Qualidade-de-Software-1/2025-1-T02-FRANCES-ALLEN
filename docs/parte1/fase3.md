@@ -53,11 +53,11 @@ Além da coleta automática e análise estática, os seguintes documentos e ferr
 
 <br>
 
-<img src="/image/projetarAvaliacao/bord.png" alt="Board de Issues" width="600px" />
+<img src="../../image/projetarAvaliacao/bord.png" alt="Board de Issues" width="600px" />
 
-<img src="/image/projetarAvaliacao/calendar1.png" alt="Calendário - Parte 1" width="600px" />
+<img src="../../image/projetarAvaliacao/calendar1.png" alt="Calendário - Parte 1" width="600px" />
 
-<img src="/image/projetarAvaliacao/calendar2.png" alt="Calendário - Parte 2" width="600px" />
+<img src="../../image/projetarAvaliacao/calendar2.png" alt="Calendário - Parte 2" width="600px" />
 
 
 ## Histórico de Versão

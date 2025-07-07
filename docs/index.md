@@ -59,26 +59,26 @@ A avaliação deve ser conduzida conforme o processo de avaliação prescrito pe
 
 ### **Parte 1: Avaliação da Qualidade do AGROMART**
 
-#### [Fase 1: Estabelecer os requisitos de avaliação](/parte1/fase1)
+#### [Fase 1: Estabelecer os requisitos de avaliação](parte1/fase1.md)
 
 A primeira fase será para o grupo determinar o propósito da avaliação, identificar os tipos de produtos e especificar o modelo de qualidade seguido pela equipe.
 
-#### [Fase 2: Especificar a avaliação](/parte1/fase2)
+#### [Fase 2: Especificar a avaliação](parte1/fase2.md)
 
 A segunda fase será para o grupo selecionar as métricas, definir os níveis de pontuação dessas métricas e seus critérios para julgamento
 
-#### [Fase 3: Projetar a avaliação](/parte1/fase3)
+#### [Fase 3: Projetar a avaliação](parte1/fase3.md)
 
 A terceira fase será onde o grupo irá se planejar e projetar como será feita a avaliação.
 Como as métricas serão coletadas, quais tipos de melhorias podemos fazer e 
 
-#### [Fase 4: Executar a avaliação](/parte1/fase4)
+#### [Fase 4: Executar a avaliação](parte1/fase4.md)
 
 A quarta fase será onde o grupo irá executar seus planejamentos da fase 3, avaliar o projeto de acordo com a fase 2 e conformar os resultados com a fase 1. Nessa fase, a equipe também irá se comprometer a criar soluções para os problemas encontrados e executar essas soluções.
 
 ### **Parte 2: Gestão do Projeto com métricas PSM/CID**
 
-#### [Desempenho dos Processos](/parte2/desempenhoDosProcessos)
+#### [Desempenho dos Processos](parte2/desempenhoDosProcessos.md)
 
 Dentro de "Desempenho dos Processos" a equipe irá avaliar como o escopo e projeto foram seguidos ao longo do tempo, analisando como o time reagiu ao processo.
 
@@ -87,7 +87,7 @@ Dentro desse tema, alguns gráficos foram utilizados:
 - Cycle Time Lead Time
 - Team Velocity
 
-#### [Calendário e Progresso](/parte2/calendarioEProgresso)
+#### [Calendário e Progresso](parte2/calendarioEProgresso.md)
 Dentro de "Calendário e Progresso" a equipe ira avaliar como o projeto foi evoluindo e progredindo, identificando gargalos e momentos congelados da evolução.
 
 Dentro desse tema, alguns gráficos foram utilizados:
@@ -96,7 +96,7 @@ Dentro desse tema, alguns gráficos foram utilizados:
 - Completed vs Committed Progress
 - Cumulative Flow
 
-#### [Recursos e Custos](/parte2/recursosECustos)
+#### [Recursos e Custos](parte2/recursosECustos.md)
 
 Dentro de "Recursos e Custos" será analisada todas as ferramentas que podem ser utilizadas para acelerar o processo, será feito uma análise de custo das ferramentas e também das horas previstas e gastas pela equipe para todo o projeto.
 
