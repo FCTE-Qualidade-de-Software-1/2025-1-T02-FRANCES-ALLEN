@@ -17,10 +17,6 @@ Será utilizada uma abordagem quantitativa baseada em métricas de código, com 
 |                      | Q3: Como está a testabilidade?      | M5. Cobertura de testes                 | Jest               | Executar `jest --coverage` e verificar o percentual global e por módulo.      |
 |                      |                                     | M6. Tempo médio de execução dos testes  | Jest               | Executar `jest --json` ou `--runInBand` e calcular o tempo médio por arquivo. |
 
-<!-- | **Segurança**        | Q4: Existem vulnerabilidades conhecidas?        | M7. Vulnerabilidades por dependência       | npm audit, SonarQube          | Rodar `npm audit` e revisar alertas críticos e altos no Sonar.                |
-|                      | Q5: Existem falhas de autenticação/autorização? | M8. Cobertura de testes em rotas sensíveis | Jest (testes de integração)   | Validar se há testes cobrindo permissões de acesso e autenticação.            |
-| **Confiabilidade**   | Q6: O sistema lida bem com erros?               | M9. Cobertura de tratamento de exceções    | Verificação manual, SonarQube | Analisar se há `try/catch`, tratamento de falhas e logging consistente.       | -->
-
 
 ### 2. Recursos Necessários
 | Recurso   | Descrição                                                             |

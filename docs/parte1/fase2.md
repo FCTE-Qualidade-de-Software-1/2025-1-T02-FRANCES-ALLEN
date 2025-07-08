@@ -18,11 +18,11 @@
 
 ### Questões e Hipóteses
 
-| Questão (Q)                             | Hipótese Associada                                                 |
-| --------------------------------------- | ------------------------------------------------------------------ |
-| **Q1:** Quão modular está o código?     | Velocidade de refatoração e melhoria de teste.                     |
-| **Q2:** Quão fácil é entender o código? | Tempo de desenvolvimento e integração com o time.                  |
-| **Q3:** Como está a testabilidade?      | Quanto maior a testabilidade, menor a chance de erros em produção. |
+| Questão (Q)                             | Hipótese Associada                                                                                                 |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Q1:** Quão modular está o código?     | Códigos modulares aceleram a refatoração e criação de testes, além de diminuir a complexidade.                     |
+| **Q2:** Quão fácil é entender o código? | Tempo de desenvolvimento e integração com o time é menor quando se tem um código mais legível e fácil de entender. |
+| **Q3:** Como está a testabilidade?      | Quanto maior a testabilidade, menor a chance de erros em produção.                                                 |
 
 ### Métricas
 

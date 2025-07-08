@@ -6,6 +6,45 @@
 
 O produto a ser analisado é o [AgroMart](https://agromart.github.io/docs/), especificamente a sua [API](https://github.com/AgroMart/api) na versão 0.1.0.
 
+#### Nome do Produto:
+Agromart
+
+#### Resumo do Projeto:**
+O Agromart é uma plataforma digital criada para conectar agricultores familiares a consumidores, facilitando a divulgação e comercialização de produtos agrícolas, especialmente no contexto de isolamento social gerado pela pandemia da COVID-19. A solução inclui um aplicativo para agricultores divulgarem seus produtos e uma interface voltada para consumidores encontrarem e contatarem produtores locais.
+
+#### Objetivo Principal:
+Promover o acesso direto entre agricultores familiares e consumidores, fortalecendo as Comunidades que Sustentam a Agricultura (CSAs) por meio da tecnologia.
+
+#### Público-Alvo:
+
+Primário: Agricultores familiares e co-agricultores participantes de CSAs.
+
+Secundário: Consumidores interessados em produtos locais e orgânicos, com foco em alimentação saudável e apoio à agricultura sustentável.
+
+#### Problemas que Resolve:
+
+- Falta de visibilidade dos produtos dos agricultores.
+- Dificuldade de contato direto entre produtores e consumidores.
+- Necessidade de adaptar a comercialização ao contexto digital.
+- Ausência de plataformas específicas para CSAs.
+- Funcionalidades-Chave:
+- Cadastro de pontos de venda com produtos, preços, localização e contatos.
+- Busca por lojas próximas usando mapas e filtros.
+- Contato direto via aplicativo de mensagens.
+- Integração com meio de pagamento digital.
+- Plataforma web para gestão e acompanhamento.
+- App dedicado para co-agricultores.
+
+#### Diferenciais:
+
+- Foco em CSAs e agricultura familiar.
+- Design orientado à usabilidade e contexto rural.
+- Abordagem open source, permitindo colaboração e transparência.
+- Envolvimento contínuo de professores e estudantes da UnB-FGA.
+
+#### Estágio Atual:
+Em desenvolvimento contínuo com versão open source, integração com meios de pagamento e apoio institucional da UnB-FGA.
+
 ### 1.2 Objetivo em relação a avaliação
 
 O objetivo é obter um laudo técnico sobre sua qualidade, indicar pontos para melhoria e adequar o produto às normas de qualidade.

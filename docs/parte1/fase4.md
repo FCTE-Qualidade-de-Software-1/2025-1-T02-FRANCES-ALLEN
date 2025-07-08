@@ -25,11 +25,23 @@ As métricas foram obtidas da seguinte forma:
 ### Linhas por arquivo:
 Todos os arquivos estavam no estado **✅ Bom**
 
+Com essa métrica percebemos que as regras negócios provavelmente estão bem separadas pois não existem arquivos muito grandes, que dificultassem a refatoração.
+
+Essa métrica foi importante para entendermos que o projeto tem uma boa separação pelas regras de negócio.
+
+Talvez essa métrica não seja a melhor para isso, mas pode indicar pontos críticos de baixa coesão do produto.
+
 ### Linhas por função:
 Das 97 funções não vazias, temos:<br/>
 **✅ Bom:** 79<br/>
 **⚠️ Aceitável:** 13<br/>
 **❌ Crítico:** 5
+
+Com isso, é possível reforçar que o projeto tem uma boa modularidade, separando o projeto em pequenos blocos de código que juntos irão fazer sentido.
+
+Apesar de o projeto estar bem modularizado, essa métrica mostra que no geral o produto tem uma boa coesão e que por estar modularizado, é mais fácil testar pequenos módulos.
+
+Porém, ainda existem pontos críticos a serem resolvidos, e funções que podem ser melhoradas.
 
 
 ### Complexidade Ciclomática por função:
@@ -38,8 +50,12 @@ Das 97 funções não vazias, temos:<br/>
 **⚠️ Aceitável:** 4<br/>
 **❌ Crítico:** 6
 
+Essa métrica foi MUITO importante pois mostrou a facilidade de entender e testar cada módulo. Pois quando se tem uma complexidade ciclomática maior, é necessário testar vários e vários casos que dificulta a testabilidade também.
+
 ### Porcentagem de módulos documentados:
 Todos os endpoints tem seus casos de usos documentados. Então o critério está **✅ Bom**.
+
+
 
 ### Cobertura de testes:
 88.88% das linhas estão cobertas por testes automatizados, fazendo com que esteja no nível<br/> **✅ Bom:**
@@ -69,8 +85,6 @@ graph TD
     Question3 --> Metric5[M5: Cobertura de testes]
     Question3 --> Metric6[M6: Tempo médio de execução dos testes por arquivo]
 ```
-
-Com as métricas, conseguimos ver que nossos objetivos estão, em geral, bons. Porém, é possível identificar que alguns arquivos e funções ainda se encontram em estado crítico e estado aceitável, dessa forma, podemos melhorar esse ponto para que o projeto como um todo se torne bom.
 
 
 ## Melhorias Propostas:
