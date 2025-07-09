@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://fcte-qualidade-de-software-1.github.io/parte1/fase4/" rel="canonical"/>
+<link href="../fase3/" rel="prev"/>
+<link href="../../parte2/desempenhoDosProcessos/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Fase 4 - Qualidades de Software - Frances Allen</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/panzoom.css" rel="stylesheet"/><meta content='{"selectors": [".d2", ".mermaid"]}' name="panzoom-data"/><meta content="material" name="panzoom-theme"/></head>
+<body data-md-color-accent="indigo" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#fase-4-executar-a-avaliacao">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Qualidades de Software - Frances Allen" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Qualidades de Software - Frances Allen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Qualidades de Software - Frances Allen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Fase 4
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Mudar para o modo escuro" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Mudar para o modo escuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg>
+</label>
+<input aria-label="Mudar para o modo claro" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Mudar para o modo claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T02-FRANCES-ALLEN" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    2025-1-T02-FRANCES-ALLEN
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Introdução
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../fase1/">
+          
+  
+  
+  Parte 1 - Avaliação da Qualidade do Agromart
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../parte2/desempenhoDosProcessos/">
+          
+  
+  
+  Parte 2 - Gestão do Projeto com métricas PSM/CID
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tabelaDeContribuicao/pontoDeControle1/">
+          
+  
+  
+  Tabelas de Contribuição
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pontoCrontole1/qualidade/">
+          
+  
+  
+  Outras Entregas
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Qualidades de Software - Frances Allen" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Qualidades de Software - Frances Allen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Qualidades de Software - Frances Allen
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T02-FRANCES-ALLEN" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    2025-1-T02-FRANCES-ALLEN
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Introdução
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Parte 1 - Avaliação da Qualidade do Agromart
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Parte 1 - Avaliação da Qualidade do Agromart
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fase1/">
+<span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fase2/">
+<span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fase3/">
+<span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Parte 2 - Gestão do Projeto com métricas PSM/CID
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Parte 2 - Gestão do Projeto com métricas PSM/CID
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../parte2/desempenhoDosProcessos/">
+<span class="md-ellipsis">
+    Desempenho dos Processos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../parte2/calendarioEProgresso/">
+<span class="md-ellipsis">
+    Calendário e Progresso
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../parte2/recursosECustos/">
+<span class="md-ellipsis">
+    Recursos e Custos
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Tabelas de Contribuição
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Tabelas de Contribuição
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tabelaDeContribuicao/pontoDeControle1/">
+<span class="md-ellipsis">
+    Ponto de Controle 1
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tabelaDeContribuicao/pontoDeControle2/">
+<span class="md-ellipsis">
+    Ponto de Controle 2
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Outras Entregas
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Outras Entregas
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Ponto de controle 1
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Ponto de controle 1
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/qualidade/">
+<span class="md-ellipsis">
+    Aspectos de Qualidade
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/produto/">
+<span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/onu/">
+<span class="md-ellipsis">
+    ONU
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Atividades Realizadas
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_1_4">
+<span class="md-nav__icon md-icon"></span>
+            Atividades Realizadas
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/atividadeSala/manutencaoSoftware/">
+<span class="md-ellipsis">
+    Slide Manutenção de Software
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/atividadeSala/gqm/">
+<span class="md-ellipsis">
+    Objetivo de Medição
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/contribuicao/">
+<span class="md-ellipsis">
+    Tabela de Contribuição
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="fase-4-executar-a-avaliacao">Fase 4 -  Executar a avaliação</h1>
+<p>Essa avaliação será divida da seguinte forma:</p>
+<ul>
+<li>Avaliado cada métrica de forma unitária de acordo com os critérios</li>
+<li>Depois será avaliado cada questão do GQM</li>
+<li>Por fim, será avaliado o Objetivo da avaliação</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Dê zoom com o scroll do mouse no diagrama para ver melhor. Caso prefira, abra em tela cheia.<br/>
+Você também mode mover o diagrama com o mouse.</p>
+</div>
+<div class="panzoom-box" data-key="none" id="panzoom0" oncontextmenu="return false;"><nav class="panzoom-top-nav"><button class="panzoom-info panzoom-button"><svg class="panzoom-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg></button><button class="panzoom-reset panzoom-button"><svg class="panzoom-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path></svg></button><button class="panzoom-max panzoom-button"><svg class="panzoom-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"></path></svg></button><button class="panzoom-min panzoom-button panzoom-hidden"><svg class="panzoom-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M160 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 320c-17.7 0-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0z"></path></svg></button></nav><pre class="mermaid"><code>graph TD
+  BussinessObjective[Objetivo de Negócio: Melhorar Manutenibilidade do AGROMART] --&gt; Objective1[Objetivo de Medição 1: Avaliar Qualidade do Código];
+
+  Objective1 --&gt; Question1[Q1: Modularidade?]
+    Question1 --&gt; AvgQtdRowsByFile[M1: Linhas por arquivo]
+    Question1 --&gt; QtdRowsByFunction[M2: Linhas por função]
+    Question1 --&gt; Density[M7: Linhas duplicadas]
+    Question1 --&gt; DuplCode[M8: Blocos de código duplicados]
+    Question1 --&gt; DuplFiles[M9: Arquivos duplicados]
+    Question1 --&gt; Complexity[M3: Complexidade Ciclomática por função]
+
+  Objective1 --&gt; Question2[Q2: Legibilidade?]
+    Question2 --&gt; Complexity
+    Question2 --&gt; documentedModules[M4: Porcentagem de módulos documentados]
+    Question2 --&gt; CognitiveC[M10: Complexidade cognitiva]
+
+  Objective1 --&gt; Question3[Q3: Testabilidade?]
+    Question3 --&gt; Metric5[M5: Cobertura de testes]
+    Question3 --&gt; Metric6[M6: Tempo médio de execução dos testes por arquivo]</code></pre><div class="panzoom-info-box panzoom-hidden"></div></div>
+<p>As métricas foram obtidas da seguinte forma:</p>
+<ul>
+<li>Linhas por arquivo: ESLint</li>
+<li>Linhas por função: ESLint</li>
+<li>Complexidade Ciclomática por função: ESLint e Sonar</li>
+<li>Porcentagem de módulos documentados: Analisamos cada endpoint com a documentação</li>
+<li>Cobertura de testes: Jest</li>
+<li>Tempo médio de execução dos testes por arquivo: Jest</li>
+<li>Porcentagem de linhas de código duplicadas no projeto: Sonar</li>
+<li>Blocos de código duplicados: Sonar</li>
+<li>Arquivos duplicados: Sonar</li>
+<li>Complexidade cognitiva: Sonar</li>
+</ul>
+<h1 id="comparacao-com-criterios">Comparação com critérios</h1>
+<h3 id="linhas-por-arquivo">Linhas por arquivo:</h3>
+<p>Todos os arquivos estavam no estado <strong>✅ Bom</strong></p>
+<p>Com essa métrica percebemos que as regras negócios provavelmente estão bem separadas pois não existem arquivos muito grandes, que dificultassem a refatoração.</p>
+<p>Essa métrica foi importante para entendermos que o projeto tem uma boa separação pelas regras de negócio.</p>
+<p>Talvez essa métrica não seja a melhor para isso, mas pode indicar pontos críticos de baixa coesão do produto.</p>
+<h3 id="linhas-por-funcao">Linhas por função:</h3>
+<p>Das 97 funções não vazias, temos:<br/>
+<strong>✅ Bom:</strong> 79<br/>
+<strong>⚠️ Aceitável:</strong> 13<br/>
+<strong>❌ Crítico:</strong> 5</p>
+<p>Com isso, é possível reforçar que o projeto tem uma boa modularidade, separando o projeto em pequenos blocos de código que juntos irão fazer sentido.</p>
+<p>Apesar de o projeto estar bem modularizado, essa métrica mostra que no geral o produto tem uma boa coesão e que por estar modularizado, é mais fácil testar pequenos módulos.</p>
+<p>Porém, ainda existem pontos críticos a serem resolvidos, e funções que podem ser melhoradas.</p>
+<h3 id="complexidade-ciclomatica-por-funcao">Complexidade Ciclomática por função:</h3>
+<p>Das 97 funções não vazias, temos:<br/>
+<strong>✅ Bom:</strong> 87<br/>
+<strong>⚠️ Aceitável:</strong> 4<br/>
+<strong>❌ Crítico:</strong> 6</p>
+<p>Essa métrica foi MUITO importante pois mostrou a facilidade de entender e testar cada módulo. Pois quando se tem uma complexidade ciclomática maior, é necessário testar vários e vários casos que dificulta a testabilidade também.</p>
+<h3 id="porcentagem-de-modulos-documentados">Porcentagem de módulos documentados:</h3>
+<p>Todos os endpoints tem seus casos de usos documentados. Então o critério está <strong>✅ Bom</strong>.</p>
+<h3 id="cobertura-de-testes">Cobertura de testes:</h3>
+<p>88.88% das linhas estão cobertas por testes automatizados, fazendo com que esteja no nível<br/> <strong>✅ Bom</strong>.</p>
+<h3 id="porcentagem-de-linhas-de-codigo-duplicadas-no-projeto">Porcentagem de linhas de código duplicadas no projeto:</h3>
+<p>7,6% de todas as linhas de código do projeto são duplicadas o que indica que este critério é<br/> <strong>❌ Crítico</strong>.</p>
+<h3 id="blocos-de-codigo-duplicados">Blocos de código duplicados:</h3>
+<p>O número de blocos de código repetidos que foi encontrado no projeto é 19, o que indica que este critério esta<br/> <strong>❌ Crítico</strong>.</p>
+<h3 id="arquivos-duplicados">Arquivos duplicados:</h3>
+<p>O número de arquivos em que foram encontradas duplicações dentro do projeto é 10, o que indica que este critério esta<br/> <strong>❌ Crítico</strong>.</p>
+<h3 id="complexidade-cognitiva">Complexidade cognitiva:</h3>
+<p>O valor da complexidade cognitiva é 185, esta é uma medida de quanto esforço mental é necessário para entender o fluxo de controle do código. Este critério está em uma situação<br/> <strong>❌ Crítico</strong>.</p>
+<h1 id="julgamento"><strong>👨‍⚖️ Julgamento</strong></h1>
+<h3 id="q1-modularidade">Q1: Modularidade</h3>
+<p>A partir das métricas, o grupo concluiu que apesar de existir poucas linhas por função na maioria das funções, o projeto se encontra atualmente com várias repetições de códigos e blocos de código duplicados, tendendo a um provável baixa modularidade.</p>
+<p>Além disso, a complexidade cognitiva do código fonte é considerada muito alta para a quantidade de linhas do projeto. Sendo um ponto extremamente crítico.</p>
+<p>As métricas de quantidade de linhas, portanto, não foram muito eficazes para essa análise. Mas as métricas de complexidade e duplicação de código demostraram facilmente em o que deveríamos focar.</p>
+<p>❌ Não está modular</p>
+<h3 id="q2-legibilidade">Q2: Legibilidade</h3>
+<p>Entendemos que por mais que a complexidade estivesse alta, o projeto estava muito bem documentado. Todos os módulos tem seus casos de uso com diagramas e possuem os critérios de aceitação bem definidos. Portanto, o projeto é facilmente legível com a documentação, porém ao melhorar a complexidade, o projeto seria muito mais fácil de entender para novos integrantes.</p>
+<p>⚠️ A legibilidade está aceitável</p>
+<h3 id="q3-testabilidade">Q3: Testabilidade?</h3>
+<p>As métricas mostram uma cobertura de código muito boa, que mostra que o projeto está bem testável e que é fácil testar novos módulos. Além de que os testes são rápidos, demorando cerca de 200ms para cada arquivo, fazendo com que seja viável testar várias vezes o projeto ao longo de sua evolução. O grupo concluiu que o projeto tem ótima testabilidade.</p>
+<p>✅ A testabilidade está boa</p>
+<h2 id="melhorias-propostas">Melhorias Propostas:</h2>
+<h3 id="11-reducao-de-complexidade-da-funcao-isdefaultroute-no-arquivo-srcmiddlewareshelpersdefaultroutesjs">1.1 Redução de complexidade da função isDefaultRoute no arquivo <code>src/middlewares/helpers/defaultRoutes.js</code></h3>
+<p>Antes com complexidade <strong>16</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">isDefaultRoute</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/i18n'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/content'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/upload'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/expo-notifications'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/plugins'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/pagamento'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/users-permissions'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/auth/google'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/auth/facebook'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/auth/github'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/email'</span><span class="p">)</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">'/_health'</span><span class="p">)</span><span class="w">        </span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">'/'</span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Para complexidade <strong>3</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">defaultRoutePrefixes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s1">'/admin'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/i18n'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/content'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/upload'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/expo-notifications'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/plugins'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/pagamento'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/users-permissions'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/auth/google'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/auth/facebook'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/auth/github'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/email'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'/_health'</span><span class="p">,</span>
+<span class="p">];</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">isDefaultRoute</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">defaultRoutePrefixes</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">prefix</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="nx">prefix</span><span class="p">))</span>
+<span class="w">    </span><span class="o">||</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'/'</span><span class="w"> </span>
+<span class="w">    </span><span class="o">||</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">''</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="12-reducao-de-complexidade-da-funcao-subistituirvalores-no-arquivo-srcpluginspagamentoserverutilsgatewayspadraojs">1.2 Redução de complexidade da função subistituirValores no arquivo <code>src/plugins/pagamento/server/utils/gateways/padrao.js</code></h3>
+<p>Antes, com complexido <strong>11</strong> e <strong>53</strong> linhas:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">substituirValores</span><span class="p">(</span><span class="nx">inputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">outputJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">  </span><span class="c1">// entra em um loop para cada chave do json</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">inputJSON</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">inputJSON</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">inputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'string'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">extractValue</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="c1">// valor dentro de um extract value</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'${valorTotal}'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getTotal</span><span class="p">(</span><span class="nx">dado</span><span class="p">.</span><span class="nx">extrato</span><span class="p">);</span>
+<span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'${dataHoje}'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getDueDate</span><span class="p">();</span>
+<span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getValueFromObjectByPath</span><span class="p">(</span>
+<span class="w">              </span><span class="nx">extractValue</span><span class="p">(</span><span class="nx">value</span><span class="p">),</span>
+<span class="w">              </span><span class="nx">dado</span>
+<span class="w">            </span><span class="p">);</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="c1">// valor fixo</span>
+<span class="w">          </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'number'</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'boolean'</span>
+<span class="w">      </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">        </span><span class="c1">// se for um array vai ser um array de items</span>
+<span class="w">        </span><span class="nx">dado</span><span class="p">.</span><span class="nx">extrato</span><span class="p">.</span><span class="nx">itens</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">let</span><span class="w"> </span><span class="nx">newItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">kv</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">valueWithIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="mf">0</span><span class="p">][</span><span class="nx">kv</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/index/g</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">newItem</span><span class="p">[</span><span class="nx">kv</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getValueFromObjectByPath</span><span class="p">(</span>
+<span class="w">              </span><span class="nx">extractValue</span><span class="p">(</span><span class="nx">valueWithIndex</span><span class="p">),</span>
+<span class="w">              </span><span class="nx">dado</span>
+<span class="w">            </span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newItem</span><span class="p">[</span><span class="nx">kv</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="nx">newItem</span><span class="p">[</span><span class="nx">kv</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">index</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">newItem</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// se não for nem string nem array vai chamar de novo</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">substituirValores</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Agora com complexidade <strong>3</strong> utilizando Strategy:
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">subistituirValoresStrategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">'string'</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">extractValue</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// valor dentro de um extract value</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'${valorTotal}'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getTotal</span><span class="p">(</span><span class="nx">dado</span><span class="p">.</span><span class="nx">extrato</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'${dataHoje}'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getDueDate</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getValueFromObjectByPath</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">extractValue</span><span class="p">(</span><span class="nx">value</span><span class="p">),</span>
+<span class="w">          </span><span class="nx">dado</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// valor fixo</span>
+<span class="w">      </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s1">'number'</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s1">'boolean'</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s1">'object'</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">      </span><span class="c1">// se for um array vai ser um array de items</span>
+<span class="w">      </span><span class="nx">dado</span><span class="p">.</span><span class="nx">extrato</span><span class="p">.</span><span class="nx">itens</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">newItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">kv</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">valueWithIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="mf">0</span><span class="p">][</span><span class="nx">kv</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/index/g</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">newItem</span><span class="p">[</span><span class="nx">kv</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getValueFromObjectByPath</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">extractValue</span><span class="p">(</span><span class="nx">valueWithIndex</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">dado</span>
+<span class="w">          </span><span class="p">);</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newItem</span><span class="p">[</span><span class="nx">kv</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">newItem</span><span class="p">[</span><span class="nx">kv</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">index</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">newItem</span><span class="p">);</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// se não for nem string nem array vai chamar de novo</span>
+<span class="w">      </span><span class="nx">outputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">substituirValores</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">substituirValores</span><span class="p">(</span><span class="nx">inputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">outputJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">  </span><span class="c1">// entra em um loop para cada chave do json</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">inputJSON</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">inputJSON</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">inputJSON</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">subistituirValoresStrategy</span><span class="p">[</span><span class="nx">strategy</span><span class="p">]</span><span class="o">?</span><span class="p">.({</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">dado</span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">outputJSON</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="13-reducao-de-complexidade-da-funcao-parsejsonrecursively-no-arquivo-srcpluginspagamentoserverutilsgatewayspadraojs">1.3 Redução de complexidade da função parseJSONRecursively no arquivo <code>src/plugins/pagamento/server/utils/gateways/padrao.js</code></h3>
+<p>Antes, com complexidade <strong>5</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">parseJSONRecursively</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">jsonObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">parseNestedJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'string'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parseJSONRecursively</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="c1">// Ignorar a string que não é um JSON válido</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'object'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">parseNestedJSON</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">parseNestedJSON</span><span class="p">(</span><span class="nx">jsonObject</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">jsonObject</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Para complexidade <strong>2</strong> com uso de Strategy:
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">jsonParserStrategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">'string'</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parseJSONRecursively</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Ignorar a string que não é um JSON válido</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s1">'object'</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">parseNestedJSON</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseNestedJSON</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">key</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">jsonParserStrategy</span><span class="p">[</span><span class="nx">strategy</span><span class="p">]</span><span class="o">?</span><span class="p">.(</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">parseJSONRecursively</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">jsonObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">parseNestedJSON</span><span class="p">(</span><span class="nx">jsonObject</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">jsonObject</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="14-reducao-de-complexidade-da-funcao-getvaluefromobjectbypath-no-arquivo-srcpluginspagamentoserverutilsgatewayspadraojs">1.4 Redução de complexidade da função getValueFromObjectByPath no arquivo <code>src/plugins/pagamento/server/utils/gateways/padrao.js</code></h3>
+<p>Antes, com complexidade <strong>4</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getValueFromObjectByPath</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span><span class="w"> </span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'||'</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">paths</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">keys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'.'</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">find</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">keys</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Verifica se a chave contém um índice</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="sr">/\d+/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">find</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Para complexidade <strong>2</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getValueFromObjectByPath</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span><span class="w"> </span><span class="nx">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'||'</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">paths</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">path</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'.'</span><span class="p">).</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="sr">/\d+/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">acc</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">acc</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">acc</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="nx">obj</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="15-a-configuracao-do-eslint-foi-consertada-e-foram-adicionadas-regras-para-impedir-que-a-complexidade-do-projeto-suba-de-forma-descontrolada-essas-regras-reforcam-o-controle-das-metricas-antes-mesmo-desse-codigo-subir-ao-repositorio-pois-sera-indicado-em-tempo-de-desenvolvimento">1.5 A configuração do ESLint foi consertada e foram adicionadas regras para impedir que a complexidade do projeto suba de forma descontrolada. Essas regras reforçam o controle das métricas antes mesmo desse código subir ao repositório, pois será indicado em tempo de desenvolvimento.</h3>
+<p>Foram adicionadas as seguintes regras:</p>
+<ul>
+<li>complexity: 3</li>
+<li>max-depth: 3</li>
+<li>max-lines: 200</li>
+<li>max-lines-per-function: 30</li>
+<li>max-params: 2</li>
+</ul>
+<p>Também foi adicionado o plugin do sonar, para que apontamentos do sonar e indicações sejam identificadas o quanto antes possível.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="../../assets/javascripts/panzoom.min.js"></script><script src="../../assets/javascripts/zoompan.js"></script></body>
+</html>

@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://fcte-qualidade-de-software-1.github.io/parte1/fase3/" rel="canonical"/>
+<link href="../fase2/" rel="prev"/>
+<link href="../fase4/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Fase 3 - Qualidades de Software - Frances Allen</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/panzoom.css" rel="stylesheet"/><meta content='{"selectors": [".d2", ".mermaid"]}' name="panzoom-data"/><meta content="material" name="panzoom-theme"/></head>
+<body data-md-color-accent="indigo" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#fase-3-projetar-a-avaliacao">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Qualidades de Software - Frances Allen" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Qualidades de Software - Frances Allen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Qualidades de Software - Frances Allen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Fase 3
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Mudar para o modo escuro" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Mudar para o modo escuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg>
+</label>
+<input aria-label="Mudar para o modo claro" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Mudar para o modo claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T02-FRANCES-ALLEN" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    2025-1-T02-FRANCES-ALLEN
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Introdução
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../fase1/">
+          
+  
+  
+  Parte 1 - Avaliação da Qualidade do Agromart
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../parte2/desempenhoDosProcessos/">
+          
+  
+  
+  Parte 2 - Gestão do Projeto com métricas PSM/CID
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tabelaDeContribuicao/pontoDeControle1/">
+          
+  
+  
+  Tabelas de Contribuição
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pontoCrontole1/qualidade/">
+          
+  
+  
+  Outras Entregas
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Qualidades de Software - Frances Allen" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Qualidades de Software - Frances Allen">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Qualidades de Software - Frances Allen
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T02-FRANCES-ALLEN" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    2025-1-T02-FRANCES-ALLEN
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Introdução
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Parte 1 - Avaliação da Qualidade do Agromart
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Parte 1 - Avaliação da Qualidade do Agromart
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fase1/">
+<span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fase2/">
+<span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plano-de-avaliacao">
+<span class="md-ellipsis">
+      Plano de avaliação
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-metodo-de-avaliacao">
+<span class="md-ellipsis">
+      1. Método de Avaliação
+    </span>
+</a>
+<nav aria-label="1. Método de Avaliação" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-recursos-necessarios">
+<span class="md-ellipsis">
+      2. Recursos Necessários
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-cronograma-de-acoes">
+<span class="md-ellipsis">
+      3. Cronograma de Ações
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4documentos-e-registros-de-apoio-a-avaliacao">
+<span class="md-ellipsis">
+      4.Documentos e Registros de Apoio à Avaliação
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#historico-de-versao">
+<span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fase4/">
+<span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Parte 2 - Gestão do Projeto com métricas PSM/CID
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Parte 2 - Gestão do Projeto com métricas PSM/CID
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../parte2/desempenhoDosProcessos/">
+<span class="md-ellipsis">
+    Desempenho dos Processos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../parte2/calendarioEProgresso/">
+<span class="md-ellipsis">
+    Calendário e Progresso
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../parte2/recursosECustos/">
+<span class="md-ellipsis">
+    Recursos e Custos
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Tabelas de Contribuição
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Tabelas de Contribuição
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tabelaDeContribuicao/pontoDeControle1/">
+<span class="md-ellipsis">
+    Ponto de Controle 1
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tabelaDeContribuicao/pontoDeControle2/">
+<span class="md-ellipsis">
+    Ponto de Controle 2
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Outras Entregas
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Outras Entregas
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Ponto de controle 1
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Ponto de controle 1
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/qualidade/">
+<span class="md-ellipsis">
+    Aspectos de Qualidade
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/produto/">
+<span class="md-ellipsis">
+    Produto Avaliado
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/onu/">
+<span class="md-ellipsis">
+    ONU
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Atividades Realizadas
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_1_4">
+<span class="md-nav__icon md-icon"></span>
+            Atividades Realizadas
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/atividadeSala/manutencaoSoftware/">
+<span class="md-ellipsis">
+    Slide Manutenção de Software
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/atividadeSala/gqm/">
+<span class="md-ellipsis">
+    Objetivo de Medição
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pontoCrontole1/contribuicao/">
+<span class="md-ellipsis">
+    Tabela de Contribuição
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plano-de-avaliacao">
+<span class="md-ellipsis">
+      Plano de avaliação
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-metodo-de-avaliacao">
+<span class="md-ellipsis">
+      1. Método de Avaliação
+    </span>
+</a>
+<nav aria-label="1. Método de Avaliação" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-recursos-necessarios">
+<span class="md-ellipsis">
+      2. Recursos Necessários
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-cronograma-de-acoes">
+<span class="md-ellipsis">
+      3. Cronograma de Ações
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4documentos-e-registros-de-apoio-a-avaliacao">
+<span class="md-ellipsis">
+      4.Documentos e Registros de Apoio à Avaliação
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#historico-de-versao">
+<span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="fase-3-projetar-a-avaliacao">Fase 3 - Projetar a avaliação</h1>
+<h2 id="plano-de-avaliacao">Plano de avaliação</h2>
+<p>Avaliar a manutenibilidade do sistema AGROMART com base em métricas de modularidade, legibilidade e testabilidade, visando identificar pontos de melhoria e garantir que o código seja sustentável, compreensível e testável.</p>
+<h2 id="1-metodo-de-avaliacao">1. Método de Avaliação</h2>
+<p>Será utilizada uma abordagem quantitativa baseada em métricas de código, com ferramentas automatizadas e revisão manual quando necessário.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Dimensão</strong></th>
+<th><strong>Questão</strong></th>
+<th><strong>Métrica</strong></th>
+<th><strong>Ferramenta</strong></th>
+<th><strong>Como utilizar</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Manutenibilidade</strong></td>
+<td>Q1: Quão modular está o código?</td>
+<td>M1. Linhas por arquivo</td>
+<td>ESLint</td>
+<td>Habilitar a regra <code>max-lines</code> para alertar arquivos com excesso de linhas.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M2. Linhas por função</td>
+<td>ESLint</td>
+<td>Usar <code>max-lines-per-function</code> para limitar funções extensas.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M3. Complexidade Ciclomática por função</td>
+<td>ESLint, SonarQube</td>
+<td>Configurar <code>complexity</code> no ESLint e analisar alertas no SonarQube.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M7. % de linhas de código duplicadas</td>
+<td>SonarQube</td>
+<td>Verificar a métrica de duplicação de código no dashboard do SonarQube.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M8. Blocos de código duplicados</td>
+<td>SonarQube</td>
+<td>Identificar blocos duplicados no projeto via análise do SonarQube.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M9. Arquivos duplicados</td>
+<td>SonarQube</td>
+<td>Identificar arquivos duplicados no projeto via análise do SonarQube.</td>
+</tr>
+<tr>
+<td></td>
+<td>Q2: Quão fácil é entender o código?</td>
+<td>M4. % de módulos documentados</td>
+<td>Verificação manual</td>
+<td>Conferir documentação técnica (Swagger, README, Notion) por módulo/endpoint.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M10. Complexidade cognitiva</td>
+<td>SonarQube</td>
+<td>Identificar complexidade cognitiva no projeto via análise do SonarQube.</td>
+</tr>
+<tr>
+<td></td>
+<td>Q3: Como está a testabilidade?</td>
+<td>M5. Cobertura de testes</td>
+<td>Jest</td>
+<td>Executar <code>jest --coverage</code> e verificar o percentual global e por módulo.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>M6. Tempo médio de execução dos testes</td>
+<td>Jest</td>
+<td>Executar <code>jest --json</code> ou <code>--runInBand</code> e calcular o tempo médio por arquivo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-recursos-necessarios">2. Recursos Necessários</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESLint</td>
+<td>Com plugins para regras de estilo e complexidade</td>
+</tr>
+<tr>
+<td>SonarQube</td>
+<td>Para análise estática de código, incluindo complexidade</td>
+</tr>
+<tr>
+<td>Jest</td>
+<td>Framework de testes do JavaScript com relatórios de cobertura e tempo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-cronograma-de-acoes">3. Cronograma de Ações</h3>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Responsável</th>
+<th>Prazo Estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuração do ESLint</td>
+<td>Caua + Maria</td>
+<td>Dia 1</td>
+</tr>
+<tr>
+<td>Execução da análise de complexidade (Sonar)</td>
+<td>Jóse F.+ Gabriel</td>
+<td>Dia 2</td>
+</tr>
+<tr>
+<td>Verificação da documentação dos módulos</td>
+<td>Maria + Caua</td>
+<td>Dias 2–3</td>
+</tr>
+<tr>
+<td>Execução do Jest com cobertura e tempo</td>
+<td>Caua</td>
+<td>Dia 3</td>
+</tr>
+<tr>
+<td>Coleta e organização dos dados</td>
+<td>Caua</td>
+<td>Dia 4</td>
+</tr>
+<tr>
+<td>Análise dos resultados e conclusão</td>
+<td>Caua</td>
+<td>Dia 5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4documentos-e-registros-de-apoio-a-avaliacao">4.Documentos e Registros de Apoio à Avaliação</h3>
+<p>Além da coleta automática e análise estática, os seguintes documentos e ferramentas também serão utilizados como fontes formais de evidência:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Fonte</strong></th>
+<th><strong>Local/Ferramenta</strong></th>
+<th><strong>Uso</strong></th>
+<th><strong>Avaliação Esperada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Board de Issues</td>
+<td>Miro</td>
+<td>Acompanhamento de entregas, descrição de atividades e responsáveis</td>
+<td>Verificar se as tarefas estão devidamente descritas, atribuídas e atualizadas</td>
+</tr>
+<tr>
+<td>Calendário (Planejamento)</td>
+<td>Miro</td>
+<td>Comparação entre o planejamento e a execução real</td>
+<td>Identificar atrasos, replanejamentos frequentes, riscos</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><img alt="Board de Issues" src="../../image/projetarAvaliacao/bord.png" width="600px"/></p>
+<p><img alt="Calendário - Parte 1" src="../../image/projetarAvaliacao/calendar1.png" width="600px"/></p>
+<p><img alt="Calendário - Parte 2" src="../../image/projetarAvaliacao/calendar2.png" width="600px"/></p>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data</th>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Descrição</th>
+<th style="text-align: center;">Autor(es)</th>
+<th style="text-align: center;">Data de revisão</th>
+<th style="text-align: center;">Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">06/07/2025</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">Versão inicial de documento</td>
+<td style="text-align: center;"><a href="https://github.com/marialuisa214">Maria Luisa</a></td>
+<td style="text-align: center;">06/07/2025</td>
+<td style="text-align: center;"><a href="https://github.com/CauaMatheus">Caua</a></td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="../../assets/javascripts/panzoom.min.js"></script><script src="../../assets/javascripts/zoompan.js"></script></body>
+</html>
