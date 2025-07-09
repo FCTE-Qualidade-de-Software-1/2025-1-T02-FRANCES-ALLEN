@@ -21,7 +21,7 @@ Este gráfico compara a quantidade de entregas por dia com a velocidade da equip
 
 <canvas id="teamVelocityChart" width="800" height="400"></canvas>
 
-### Cumulative Flow Diagram
+<!-- ### Cumulative Flow Diagram
 
 Este gráfico mostra o fluxo acumulado de tarefas nas diferentes fases do processo.
 
@@ -30,7 +30,7 @@ Este gráfico mostra o fluxo acumulado de tarefas nas diferentes fases do proces
 
 <canvas id="cumulativeFlowChart" width="800" height="400"></canvas>
 
-Os gráficos apresentados fornecem uma visão ampla sobre a consistência, ritmo e fluxo de trabalho da equipe durante o ciclo de desenvolvimento.
+Os gráficos apresentados fornecem uma visão ampla sobre a consistência, ritmo e fluxo de trabalho da equipe durante o ciclo de desenvolvimento. -->
 
 <script src="../charts/desempenhoDosProcessos.js"></script>
-<script src="../charts/cumulativoFlow.js"></script>
+<!-- <script src="../charts/cumulativoFlow.js"></script> -->
