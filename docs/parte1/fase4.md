@@ -2,6 +2,7 @@
 
 Primeiramente, vamos relembrar nossas métricas:
 
+
 | Métrica (M)                                            | Critérios                                                                                   |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
 | **M1:** Linhas por arquivo                             | **✅ Bom:** M1 <= 200 <br/> **⚠️ Aceitável:** 200 < M1 <= 300 <br/> **❌ Crítico:** M1 > 300   |
@@ -10,6 +11,10 @@ Primeiramente, vamos relembrar nossas métricas:
 | **M4:** Porcentagem de módulos documentados            | **✅ Bom:** M4 >= 80% <br/> **⚠️ Aceitável:** 60% <= M4 < 80%  <br/> **❌ Crítico:** M4 < 60%  |
 | **M5:** Cobertura de testes                            | **✅ Bom:** M5 >= 80% <br/> **⚠️ Aceitável:** 70% <= M5 < 80%  <br/> **❌ Crítico:** M5 < 70%  |
 | **M6:** Tempo médio de execução dos testes por arquivo | **✅ Bom:** M6 <= 500ms <br/> **⚠️ Aceitável:** 500ms < M6 <= 1s <br/> **❌ Crítico:** M6 > 1s |
+| **M7:** Porcentagem de linhas de código duplicadas no projeto | **✅ Bom:** M7 <= 3% <br/> **⚠️ Aceitável:** 3% < M7 <= 5% <br/> **❌ Crítico:** M7 > 5% |
+| **M8:** Blocos de código duplicados | **✅ Bom:** 1 <= M8 <= 2 <br/> **⚠️ Aceitável:** M8 = 3 <br/> **❌ Crítico:** M8 > 3 |
+| **M9:** Arquivos duplicados | **✅ Bom:** 1 <= M9 <= 2 <br/> **⚠️ Aceitável:** M9 = 3 <br/> **❌ Crítico:** M9 > 3 |
+| **M10:** Complexidade cognitiva | **✅ Bom:** M10 < 10 <br/> **⚠️ Aceitável:** 15 >= M10 >= 10 <br/> **❌ Crítico:** M10 > 15 |
 
 As métricas foram obtidas da seguinte forma:
 
@@ -19,6 +24,10 @@ As métricas foram obtidas da seguinte forma:
 - Porcentagem de módulos documentados: Analisamos cada endpoint com a documentação
 - Cobertura de testes: Jest
 - Tempo médio de execução dos testes por arquivo: Jest
+- Porcentagem de linhas de código duplicadas no projeto: Sonar
+- Blocos de código duplicados: Sonar
+- Arquivos duplicados: Sonar
+- Complexidade cognitiva: Sonar
 
 # Comparação com critérios
 
@@ -55,10 +64,20 @@ Essa métrica foi MUITO importante pois mostrou a facilidade de entender e testa
 ### Porcentagem de módulos documentados:
 Todos os endpoints tem seus casos de usos documentados. Então o critério está **✅ Bom**.
 
-
-
 ### Cobertura de testes:
-88.88% das linhas estão cobertas por testes automatizados, fazendo com que esteja no nível<br/> **✅ Bom:**
+88.88% das linhas estão cobertas por testes automatizados, fazendo com que esteja no nível<br/> **✅ Bom**.
+
+### Porcentagem de linhas de código duplicadas no projeto:
+7,6% de todas as linhas de código do projeto são duplicadas o que indica que este critério é<br/> **❌ Crítico**.
+
+### Blocos de código duplicados:
+O número de blocos de código repetidos que foi encontrado no projeto é 19, o que indica que este critério esta<br/> **❌ Crítico**.
+
+### Arquivos duplicados:
+O número de arquivos em que foram encontradas duplicações dentro do projeto é 10, o que indica que este critério esta<br/> **❌ Crítico**.
+
+### Complexidade cognitiva:
+O valor da complexidade cognitiva é 185, esta é uma medida de quanto esforço mental é necessário para entender o fluxo de controle do código. Este critério está em uma situação<br/> **❌ Crítico**.
 
 ## Julgamento
 
@@ -75,11 +94,15 @@ graph TD
   Objective1 --> Question1[Q1: Modularidade?]
     Question1 --> AvgQtdRowsByFile[M1: Linhas por arquivo]
     Question1 --> QtdRowsByFunction[M2: Linhas por função]
+    Question1 --> Density[M7: Linhas duplicadas]
+    Question1 --> DuplCode[M8: Blocos de código duplicados]
+    Question1 --> DuplFiles[M9: Arquivos duplicados]
     Question1 --> Complexity[M3: Complexidade Ciclomática por função]
   
   Objective1 --> Question2[Q2: Legibilidade?]
     Question2 --> Complexity
     Question2 --> documentedModules[M4: Porcentagem de módulos documentados]
+    Question2 --> CognitiveC[M10: Complexidade cognitiva]
   
   Objective1 --> Question3[Q3: Testabilidade?]
     Question3 --> Metric5[M5: Cobertura de testes]

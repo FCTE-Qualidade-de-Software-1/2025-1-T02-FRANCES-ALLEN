@@ -8,14 +8,19 @@ Avaliar a manutenibilidade do sistema AGROMART com base em métricas de modulari
 ## 1. Método de Avaliação
 Será utilizada uma abordagem quantitativa baseada em métricas de código, com ferramentas automatizadas e revisão manual quando necessário.
 
-| **Dimensão**         | **Questão**                         | **Métrica**                             | **Ferramenta**     | **Como utilizar**                                                             |
-| -------------------- | ----------------------------------- | --------------------------------------- | ------------------ | ----------------------------------------------------------------------------- |
-| **Manutenibilidade** | Q1: Quão modular está o código?     | M1. Linhas por arquivo                  | ESLint             | Habilitar a regra `max-lines` para alertar arquivos com excesso de linhas.    |
-|                      |                                     | M2. Linhas por função                   | ESLint             | Usar `max-lines-per-function` para limitar funções extensas.                  |
-|                      |                                     | M3. Complexidade Ciclomática por função | ESLint, SonarQube  | Configurar `complexity` no ESLint e analisar alertas no SonarQube.            |
-|                      | Q2: Quão fácil é entender o código? | M4. % de módulos documentados           | Verificação manual | Conferir documentação técnica (Swagger, README, Notion) por módulo/endpoint.  |
-|                      | Q3: Como está a testabilidade?      | M5. Cobertura de testes                 | Jest               | Executar `jest --coverage` e verificar o percentual global e por módulo.      |
-|                      |                                     | M6. Tempo médio de execução dos testes  | Jest               | Executar `jest --json` ou `--runInBand` e calcular o tempo médio por arquivo. |
+| **Dimensão**         | **Questão**                         | **Métrica**                             | **Ferramenta**         | **Como utilizar**                                                                 |
+|----------------------|--------------------------------------|-----------------------------------------|------------------------|------------------------------------------------------------------------------------|
+| **Manutenibilidade** | Q1: Quão modular está o código?     | M1. Linhas por arquivo                  | ESLint                 | Habilitar a regra `max-lines` para alertar arquivos com excesso de linhas.        |
+|                      |                                      | M2. Linhas por função                   | ESLint                 | Usar `max-lines-per-function` para limitar funções extensas.                      |
+|                      |                                      | M3. Complexidade Ciclomática por função | ESLint, SonarQube      | Configurar `complexity` no ESLint e analisar alertas no SonarQube.                |
+|                      |                                      | M7. % de linhas de código duplicadas    | SonarQube              | Verificar a métrica de duplicação de código no dashboard do SonarQube.            |
+|                      |                                      | M8. Blocos de código duplicados         | SonarQube              | Identificar blocos duplicados no projeto via análise do SonarQube.                |
+|                      |                                      | M9. Arquivos duplicados         | SonarQube              | Identificar arquivos duplicados no projeto via análise do SonarQube.                |
+|                      | Q2: Quão fácil é entender o código? | M4. % de módulos documentados           | Verificação manual     | Conferir documentação técnica (Swagger, README, Notion) por módulo/endpoint.      |
+|                      |                                      | M10. Complexidade cognitiva         | SonarQube              | Identificar complexidade cognitiva no projeto via análise do SonarQube.                |
+|                      | Q3: Como está a testabilidade?      | M5. Cobertura de testes                 | Jest                   | Executar `jest --coverage` e verificar o percentual global e por módulo.          |
+|                      |                                      | M6. Tempo médio de execução dos testes  | Jest                   | Executar `jest --json` ou `--runInBand` e calcular o tempo médio por arquivo.     |
+
 
 
 ### 2. Recursos Necessários
